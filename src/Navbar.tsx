@@ -32,8 +32,8 @@ const Navbar: React.FC = () => {
     <>
       <div className="navbar">
         <div className="logo">
-          <i className="fa-solid fa-font-awesome"></i>
-          <a href="#">LOGO</a>
+          {/* <i className="fa-solid fa-font-awesome"></i> */}
+          <a href="#">⚡SKILLSYNC</a>
         </div>
         <div className="menu">
           <div className="menu-links">
