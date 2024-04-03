@@ -16,7 +16,7 @@ const Section1: React.FC = () => {
     width: "100%",
     height: "100%",
     objectFit: "cover",
-    zIndex: -1, // Ensure the image is behind other content
+    zIndex: 0, // Ensure the image is behind other content
   };
 
   const textStyle: React.CSSProperties = {
