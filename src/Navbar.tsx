@@ -1,55 +1,29 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import "@/Navbar.css";
 
 const Navbar: React.FC = () => {
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-
-  useEffect(() => {
-    const navBar = document.querySelector(".navbar") as HTMLElement;
-
-    const handleScroll = () => {
-      const currScrollPos = window.scrollY;
-
-      if (navBar) {
-        if (currScrollPos > prevScrollPos) {
-          navBar.style.transform = `translateY(-105%)`;
-        } else {
-          navBar.style.transform = `translateY(0%)`;
-        }
-      }
-
-      setPrevScrollPos(currScrollPos);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [prevScrollPos]);
-
   return (
-    <>
-      <div className="navbar">
-        <div className="logo">
-          <i className="fa-solid fa-font-awesome"></i>
-          <a href="#">LOGO</a>
-        </div>
-        <div className="menu">
-          <div className="menu-links">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-            <a href="#">Blog</a>
-          <button className="log-in">Log In</button>
-          </div>
-        </div>
-        <div className="menu-btn">
-          <i className="fa-solid fa-bars"></i>
+    <div className="navbar">
+      <div className="logo">
+        <i className="fa-solid fa-font-awesome"></i>
+        <Link to="/login">LOGO</Link>
+      </div>
+      <div className="menu">
+        <div className="menu-links">
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
+          <Link to="/blog">Blog</Link>
+          <p><Link to='/login'>Log In</Link></p>
         </div>
       </div>
-    </>
+      <div className="menu-btn">
+        <i className="fa-solid fa-bars"></i>
+      </div>
+    </div>
   );
-}
+};
 
 export default Navbar;
+
