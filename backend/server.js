@@ -5,6 +5,7 @@ const connectDB=require('./config/db')
 const {errorHandler}=require('./middleware/errorMiddleware')
 const PORT =process.env.PORT ||8000
 connectDB()
+
 const app=express()
 
 app.use(express.json())
