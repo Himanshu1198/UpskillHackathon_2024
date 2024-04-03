@@ -1,4 +1,4 @@
-
+import {Link} from 'react-router-dom'
 "use client";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 export function TypewriterEffectSmoothDemo() {
@@ -16,7 +16,9 @@ export function TypewriterEffectSmoothDemo() {
     <div className="flex flex-col items-center justify-center h-[40rem]">
         <TypewriterEffectSmooth words={words} />
       <p className="text-neutral-400 dark:text-neutral-200 text-xl sm:text-lg">
-        Your road to success starts from here
+        <Link to='/login'>
+        Login
+        </Link>Your road to success starts from here
       </p>
       
       {/* <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
