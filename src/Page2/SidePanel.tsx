@@ -7,7 +7,7 @@ const SidePanel = () => {
       name:'',
       email:'',
       _id:'',
-      token:''
+      token:'',
     });
 
   const handleConnectionsClick = () => {
@@ -40,7 +40,7 @@ const { _id,name,email,token }=UserData
         <input type="text" placeholder="Search" className="input input-bordered text-gray-100 w-24 md:w-auto" />
       </div>
 
-<div className="cardcontainer p-2 mt-6">
+<div className="card-container p-2 mt-6">
 <div className="flex flex-col justify-center max-w-xs p-6 shadow-lg rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
 	<img src="https://source.unsplash.com/150x150/?portrait?3" alt="" className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square" />
 	<div className="space-y-4 text-center divide-y dark:divide-gray-300">

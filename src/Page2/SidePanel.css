@@ -11,10 +11,9 @@
 }
 
 
-button{
+/* button{
     display: flex;
     /* align-self: flex-end; */
-}
 
 @media (max-width: 900px) {
     .side-panel {

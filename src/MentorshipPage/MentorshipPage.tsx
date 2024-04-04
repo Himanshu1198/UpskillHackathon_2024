@@ -10,9 +10,9 @@ export default function MentorshipPage(){
         <>
         {/* <Navbar/> */}
         <div className="h-screen bg-white">
-        <HeroSection/>
-        <Companies/>
-        <Mentors/>
+        {/* <HeroSection/> */}
+        {/* <Companies/> */}
+        {/* <Mentors/> */}
         <Faq/>
         </div>
         </>

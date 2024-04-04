@@ -2,6 +2,9 @@ import './App.css'
 import Footer from './Footer'
 import { GlobeDemo } from './GlobeSection'
 import LandingPage from './LandingPage'
+import BeMentor from './MentorshipPage/BeMentor/BeMentor'
+// import MentorMain from './MentorshipPage/BeMentor/MentorMain'
+import HeroSection from './MentorshipPage/HeroSection'
 // import HeroSection from './MentorshipPage/HeroSection'
 import MentorshipPage from './MentorshipPage/MentorshipPage'
 import Navbar from './Navbar'
@@ -16,7 +19,9 @@ import { TypewriterEffectSmoothDemo } from './Typewriter'
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
 import Login from './Login'
 import Signup from './Signup'
+import MentorMain from './MentorshipPage/BeMentor/MentorMain'
 import { useEffect } from 'react'
+import MentorMatch from './MentorshipPage/FindMentor/MentorMatch' 
 function App() {
   // useEffect(()=>{
   //   localStorage.setItem('userData',JSON.stringify(null))
@@ -31,8 +36,20 @@ function App() {
     <Route path='/signup' element={<><Signup /></>}/>
     <Route path='/mentorship' element={<MentorshipPage />}/>
     <Route path='/PageTwo' element={<PageTwo />}/>
+    <Route path='/BeMentor' element={<MentorMain />}/>
+    <Route path='/FindMentor' element={<MentorMatch />}/>
   </Routes>
 </Router>
+  {/* <LandingPage/> */}
+
+  {/* <PageTwo/> */}
+
+
+{/* <MentorshipPage/>   */}
+{/* <MentorshipPage/> */}
+
+{/* <MentorMain/> */}
+      
     </>
   )
 }

@@ -1,9 +1,8 @@
 import "@/MentorshipPage/Companies.css";
-
 export default function Companies() {
     return (
         <>
-        <div>
+        <div className="companies-body">
             <div className="flex items-center mt-8">
                 <div className="mentors-heading mr-6 p-8 mt-10 m-6 text-3xl">Mentors from companies:</div>
                 <div className="slider mt-10 mr-2">
@@ -60,28 +59,27 @@ export default function Companies() {
 
             <div className="grid grid-cols-3 mt-4 space-x-12">
             <button className="flex item-center justify-center px-28 py-5 shadow-[inset_0_0_0_2px_#616467] rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
-  AI/ML
+AI/ML
 </button>
 <button className="flex item-center justify-center px-28 py-5 shadow-[inset_0_0_0_2px_#616467] rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
-  SDE
+SDE
 </button>
 <button className="flex item-center justify-center px-12 py-5 shadow-[inset_0_0_0_2px_#616467] rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
-  Enterpreneurship
+Enterpreneurship
 </button>
 </div>
 
 <div className="grid grid-cols-3 mt-6 p-4 space-x-12">
             <button className="flex item-center justify-center px-12 py-5 shadow-[inset_0_0_0_2px_#616467]  rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
-  Cloud Computing
+Cloud Computing
 </button>
 <button className="flex item-center justify-center px-16 py-5 shadow-[inset_0_0_0_2px_#616467] rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
-  Study Abroad
+Study Abroad
 </button>
 <button className="flex item-center justify-center px-28 py-5 shadow-[inset_0_0_0_2px_#616467] rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
-  MBA
+MBA
 </button>
 </div>
-
 </div>
 </div>
 

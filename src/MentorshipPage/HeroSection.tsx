@@ -14,7 +14,7 @@ export default function HeroSection(){
                     <button className="px-8 py-2 mt-6 font-medium rounded-full bg-gradient-to-r from-blue-400 to-blue-600 text-white focus:ring-2 focus:ring-blue-400 hover:shadow-xl transition duration-200">
   Find a mentor
 </button>
-<button className="ml-6 px-8 py-2 mt-6 font-medium rounded-full border-4 bg-white text-neutral-700 text-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200" style={{ borderColor: '#4299e1' }}>
+<button className="dusra-button border-blue-800 underline ml-6 px-8 py-2 mt-6 font-medium rounded-full border-4  bg-white text-neutral-700 text-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200">
   Be a Mentor
 </button>
 
