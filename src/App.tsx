@@ -2,6 +2,8 @@ import './App.css'
 import Footer from './Footer'
 import { GlobeDemo } from './GlobeSection'
 import LandingPage from './LandingPage'
+import BeMentor from './MentorshipPage/BeMentor/BeMentor'
+import MentorMain from './MentorshipPage/BeMentor/MentorMain'
 import HeroSection from './MentorshipPage/HeroSection'
 import MentorshipPage from './MentorshipPage/MentorshipPage'
 import Navbar from './Navbar'
@@ -22,8 +24,9 @@ function App() {
   {/* <PageTwo/> */}
 
 
-<MentorshipPage/>  
+{/* <MentorshipPage/>   */}
 
+<MentorMain/>
       
     </>
   )

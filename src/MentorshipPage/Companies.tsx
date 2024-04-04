@@ -70,7 +70,7 @@ export default function Companies() {
 </button>
 </div>
 
-<div className="line2 mt-6 p-4 space-x-12">
+<div className="line2 mt-12 space-x-12">
             <button className="px-12 py-5 shadow-[inset_0_0_0_2px_#616467]  rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
   Cloud Computing
 </button>
