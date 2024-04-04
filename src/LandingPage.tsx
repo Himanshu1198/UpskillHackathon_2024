@@ -11,23 +11,17 @@ function LandingPage() {
   return (
     <>
       <Navbar />
-
       <div className="welcome-container">
         <Section1 />
       </div>
-
       <div className="panel-container flex flex-col">
         <GlobeDemo />
         <div className="panel flex flex-col">
           <Panel1 />
         </div>
       </div>
-
       <Panel2 />
       <Footer/>
-
-
-      
     </>
   )
 }
