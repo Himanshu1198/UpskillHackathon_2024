@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "@/Navbar.css";
-
+import {Link} from 'react-router-dom'
 const Navbar: React.FC = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
@@ -37,11 +37,12 @@ const Navbar: React.FC = () => {
         </div>
         <div className="menu">
           <div className="menu-links">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-            <a href="#">Blog</a>
-          <button className="log-in">Log In</button>
+            <Link to="#">Home</Link>
+            <Link to="#">About</Link>
+            <Link to="#">Contact</Link>
+            <Link to="#">Blog</Link>
+          <Link to='/login' className="log-in">Log In
+          </Link>
           </div>
         </div>
         <div className="menu-btn">

@@ -2,7 +2,7 @@ import './App.css'
 import Footer from './Footer'
 import { GlobeDemo } from './GlobeSection'
 import LandingPage from './LandingPage'
-import HeroSection from './MentorshipPage/HeroSection'
+// import HeroSection from './MentorshipPage/HeroSection'
 import MentorshipPage from './MentorshipPage/MentorshipPage'
 import Navbar from './Navbar'
 import List from './Page2/Followers'
@@ -13,16 +13,27 @@ import Panel1 from './Panel1'
 import Panel2 from './Panel2'
 import Section1 from './Section1'
 import { TypewriterEffectSmoothDemo } from './Typewriter'
-
+import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
+import Login from './Login'
+import Signup from './Signup'
 function App() {
   return (
     <>
+<Router>
+  <Routes>
+    <Route path='/' element={<><LandingPage /></>}/>
+    <Route path='/login' element={<><Login /></>}/>
+    <Route path='/signup' element={<><Signup /></>}/>
+    {/* <Route path='/mentorship' element={<MentorshipPage />}/> */}
+    {/* <Route path='/PageTwo' element={<PageTwo />}/> */}
+  </Routes>
+</Router>
   {/* <LandingPage/> */}
 
   {/* <PageTwo/> */}
 
 
-<MentorshipPage/>  
+{/* <MentorshipPage/> */}
 
       
     </>
