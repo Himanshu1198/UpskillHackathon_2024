@@ -8,6 +8,7 @@ import Section1 from './Section1'
 import { TypewriterEffectSmoothDemo } from './Typewriter'
 
 function LandingPage() {
+  
   return (
     <>
       <Navbar />

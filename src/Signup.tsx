@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Login.css'
-// import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import axios from 'axios';
 const Signup = () => {
   const [formData, setformData] = useState({
     name:'',
@@ -9,6 +10,10 @@ const Signup = () => {
     cpassword:''
   });
 const {name, email, password,cpassword}=formData
+const axiosInstance = axios.create({
+  baseURL: 'http://localhost:8000/api/users', // Replace with your server URL
+});
+const navigate=useNavigate();
   const handleChange = (e: { target: { id: any; value: any; }; }) => {
     setformData((prevState)=>({
         ...prevState,
@@ -18,6 +23,19 @@ const {name, email, password,cpassword}=formData
 
   const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
+    axiosInstance.post('/', {
+      name,
+      email,
+      password
+    })
+    .then(response => {
+      const userData=response.data
+      localStorage.setItem('userData', JSON.stringify(userData));
+      navigate('/pagetwo')
+    })
+    .catch(error => {
+      console.error('Register failed:', error.response.data);
+    });
   };
 
   return (

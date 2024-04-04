@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 // import { useSelector, useDispatch } from 'react-redux'
 // import {toast } from 'react-toastify'
 import './Login.css'
@@ -12,22 +13,32 @@ const Login = () => {
    
   });
 const { email, password}=formData
+const axiosInstance = axios.create({
+  baseURL: 'http://localhost:8000/api/users', // Replace with your server URL
+});
+const navigate=useNavigate()
   const handleChange = (e: { target: { id: any; value: any; }; }) => {
     setformData((prevState)=>({
         ...prevState,
         [e.target.id]:(e.target.value),
     }))
   };
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
+  const handleSubmit = async(e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    
-    // dispatch(login(formData))
-    // .unwrap()
-    // .then((user: { name: any; }) => {
-    //   toast.success(`Logged in as ${user.name}`)
-    //   navigate('/')
-    // })
-    // .catch(toast.error)
+    axiosInstance.post('/login', {
+      email,
+      password
+    })
+    .then(response => {
+      // console.log(response.data);
+      const userData=response.data
+      console.log(userData.name);
+      localStorage.setItem('userData', JSON.stringify(userData));
+      navigate('/pagetwo')
+    })
+    .catch(error => {
+      console.error('Login failed:', error.response.data);
+    });
   }
   return (
     <div className="flex justify-center items-center h-screen bg-gray-200">

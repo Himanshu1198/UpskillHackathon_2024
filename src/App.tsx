@@ -16,28 +16,24 @@ import { TypewriterEffectSmoothDemo } from './Typewriter'
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
 import Login from './Login'
 import Signup from './Signup'
+import { useEffect } from 'react'
 function App() {
+  // useEffect(()=>{
+  //   localStorage.setItem('userData',JSON.stringify(null))
+  // })
   return (
     <>
 <Router>
+  {/* <Navbar /> */}
   <Routes>
     <Route path='/' element={<><LandingPage /></>}/>
     <Route path='/login' element={<><Login /></>}/>
     <Route path='/signup' element={<><Signup /></>}/>
-    {/* <Route path='/mentorship' element={<MentorshipPage />}/> */}
-    {/* <Route path='/PageTwo' element={<PageTwo />}/> */}
+    <Route path='/mentorship' element={<MentorshipPage />}/>
+    <Route path='/PageTwo' element={<PageTwo />}/>
   </Routes>
 </Router>
-  {/* <LandingPage/> */}
-
-  {/* <PageTwo/> */}
-
-
-{/* <MentorshipPage/> */}
-
-      
     </>
   )
 }
-
 export default App

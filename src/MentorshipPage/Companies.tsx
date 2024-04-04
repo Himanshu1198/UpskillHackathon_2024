@@ -58,26 +58,26 @@ export default function Companies() {
             <p className="p-8 text-2xl">Top Domains</p>
             <div className="button-container">
 
-            <div className="line1 mt-4 space-x-12">
-            <button className="px-28 py-5 shadow-[inset_0_0_0_2px_#616467] rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
+            <div className="grid grid-cols-3 mt-4 space-x-12">
+            <button className="flex item-center justify-center px-28 py-5 shadow-[inset_0_0_0_2px_#616467] rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
   AI/ML
 </button>
-<button className="px-28 py-5 shadow-[inset_0_0_0_2px_#616467] rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
+<button className="flex item-center justify-center px-28 py-5 shadow-[inset_0_0_0_2px_#616467] rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
   SDE
 </button>
-<button className="px-12 py-5 shadow-[inset_0_0_0_2px_#616467] rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
+<button className="flex item-center justify-center px-12 py-5 shadow-[inset_0_0_0_2px_#616467] rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
   Enterpreneurship
 </button>
 </div>
 
-<div className="line2 mt-6 p-4 space-x-12">
-            <button className="px-12 py-5 shadow-[inset_0_0_0_2px_#616467]  rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
+<div className="grid grid-cols-3 mt-6 p-4 space-x-12">
+            <button className="flex item-center justify-center px-12 py-5 shadow-[inset_0_0_0_2px_#616467]  rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
   Cloud Computing
 </button>
-<button className="px-16 py-5 shadow-[inset_0_0_0_2px_#616467] rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
+<button className="flex item-center justify-center px-16 py-5 shadow-[inset_0_0_0_2px_#616467] rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
   Study Abroad
 </button>
-<button className="px-28 py-5 shadow-[inset_0_0_0_2px_#616467] rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
+<button className="flex item-center justify-center px-28 py-5 shadow-[inset_0_0_0_2px_#616467] rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
   MBA
 </button>
 </div>

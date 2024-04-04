@@ -1,9 +1,11 @@
 #root {
-  max-width: 1580px;
+  max-width: fit-content;
+  height: 100vh;
   margin: 0 auto;
   padding: 0rem;
   text-align: center;
-  overflow-x: hidden;
+  overflow-x:hidden;
+  overflow-y: auto;
 }
 
 .logo {
