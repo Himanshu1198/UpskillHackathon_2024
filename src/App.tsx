@@ -11,12 +11,14 @@ import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 // import Navbar from './Navbar'
 // import Section1 from './Section1'
+
 import { TypewriterEffectSmoothDemo } from './Typewriter'
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
+    
     <Router>
       <Routes>
         <Route path='/' element={<>
@@ -33,9 +35,7 @@ function App() {
      <Route path='/contact' element={<><Panel1 /></>}></Route>
       </Routes>
       <ToastContainer />
-    </Router>
-    
-    
+    </Router>    
   )
 }
 

@@ -1,35 +1,50 @@
-import React, { useState } from 'react';
-import './Login.css'
-import { useNavigate } from 'react-router-dom'
-import { toast } from 'react-toastify'
-import { useSelector, useDispatch } from 'react-redux'
-import { register } from '../src/features/auth/authSlice'
-const Signup = () => {
-  const [formData, setformData] = useState({
-    name:'',
-    email:'',
-    password:'',
-    cpassword:''
-  });
-const {name, email, password,cpassword}=formData
-  const handleChange = (e: { target: { id: any; value: any; }; }) => {
-    setformData((prevState)=>({
-        ...prevState,
-        [e.target.id]:(e.target.value),
-    }))
-  };
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
+import React, { useState, useContext } from 'react';
+import './Login.css';
+import { useNavigate } from 'react-router-dom';
+import { AuthContext } from './Context/Auth/AuthContext';
+import axios from 'axios'; // Import axios for making HTTP requests
 
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
+const Signup = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: '',
+    cpassword: ''
+  });
+
+  const { dispatch } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const { name, email, password, cpassword } = formData;
+
+  const handleChange = (e: { target: { id: any; value: any; }; }) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.id]: e.target.value
+    }));
+  };
+
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    dispatch(register(formData))
-    .unwrap()
-    .then((user) => {
-      toast.success(`Registered new user - ${user.name}`)
-      navigate('/')
-    })
-    .catch(toast.error)
+
+    try {
+      // Make POST request to signup API endpoint
+      const response = await axios.post('http://localhost:8000/api/users/register', formData);
+      
+      // Extract user data from response
+      const user = response.data;
+
+      // Store user data in local storage
+      localStorage.setItem('user', JSON.stringify(user));
+
+      // Dispatch action to update context state
+      dispatch({ type: 'LOGIN', payload: user });
+
+      // Redirect user to desired location (e.g., home page)
+      navigate('/'); // Assuming '/' is the home page route
+    } catch (error) {
+      console.error('Signup failed:', error);
+    }
   };
 
   return (
@@ -88,9 +103,8 @@ const {name, email, password,cpassword}=formData
             Sign Up
           </button>
           <div>
-          <button className='login-with-google-btn'>Sign In With Google</button>
+            <button className='login-with-google-btn'>Sign In With Google</button>
           </div>
-          
         </form>
       </div>
     </div>
@@ -98,3 +112,4 @@ const {name, email, password,cpassword}=formData
 };
 
 export default Signup;
+
