@@ -2,32 +2,33 @@ import React, { useEffect, useState } from 'react';
 import "@/Navbar.css";
 import {Link} from 'react-router-dom'
 const Navbar: React.FC = () => {
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  // const [prevScrollPos, setPrevScrollPos] = useState(0);
 
-  useEffect(() => {
-    const navBar = document.querySelector(".navbar") as HTMLElement;
+  // useEffect(() => {
+    // const navBar = document.querySelector(".navbar") as HTMLElement;
 
-    const handleScroll = () => {
-      const currScrollPos = window.scrollY;
+  //   const handleScroll = () => {
+  //     const currScrollPos = window.scrollY;
 
-      if (navBar) {
-        if (currScrollPos > prevScrollPos) {
-          navBar.style.transform = `translateY(-105%)`;
-        } else {
-          navBar.style.transform = `translateY(0%)`;
-        }
-      }
+  //     if (navBar) {
+  //       if (currScrollPos > prevScrollPos) {
+  //         navBar.style.transform = `translateY(-105%)`;
+  //       } else {
+  //         navBar.style.transform = `translateY(0%)`;
+  //       }
+  //     }
 
-      setPrevScrollPos(currScrollPos);
-    };
+  //     setPrevScrollPos(currScrollPos);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [prevScrollPos]);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, [prevScrollPos]);
 
+  const userData=localStorage.getItem('userData')
   return (
     <>
       <div className="navbar">
@@ -41,8 +42,15 @@ const Navbar: React.FC = () => {
             <Link to="#">About</Link>
             <Link to="#">Contact</Link>
             <Link to="#">Blog</Link>
+            {
+
+          userData ?
+          <Link to='/login' className="log-in">Logged In
+          </Link>
+          :
           <Link to='/login' className="log-in">Log In
           </Link>
+            }
           </div>
         </div>
         <div className="menu-btn">

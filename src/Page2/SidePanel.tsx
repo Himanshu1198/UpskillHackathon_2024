@@ -1,30 +1,51 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './SidePanel.css';
 import List from './Followers';
-
 const SidePanel = () => {
     const [isListOpen, setIsListOpen] = useState(false);
+    const[UserData,setUserData]=useState({
+      name:'',
+      email:'',
+      _id:'',
+      token:'',
+    });
 
   const handleConnectionsClick = () => {
     setIsListOpen(true);
   };
-
   const handleCloseList = () => {
     setIsListOpen(false);
   };
-
+useEffect(()=>{
+  const storedUserData = localStorage.getItem('userData');
+  console.log(storedUserData);
+  try{
+    if (storedUserData) {
+      const p=JSON.parse(storedUserData)
+      console.log(p)
+      setUserData(p);
+    }
+    console.log(UserData);
+  }
+  catch(error)
+  {
+    console.log(error)
+  }
+    
+},[])
+const { _id,name,email,token }=UserData
   return (
     <div className="side-panel bg-gradient-to-r from-indigo-400 to-purple-400 p-5 fixed top-0 left-0 bottom-0 h-screen">
       <div className="form-control">
         <input type="text" placeholder="Search" className="input input-bordered text-gray-100 w-24 md:w-auto" />
       </div>
 
-<div className="cardcontainer p-2 mt-6">
+<div className="card-container p-2 mt-6">
 <div className="flex flex-col justify-center max-w-xs p-6 shadow-lg rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
 	<img src="https://source.unsplash.com/150x150/?portrait?3" alt="" className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square" />
 	<div className="space-y-4 text-center divide-y dark:divide-gray-300">
 		<div className="my-2 space-y-1">
-			<h2 className="text-xl font-semibold sm:text-2xl">Leroy Jenkins</h2>
+			<h2 className="text-xl font-semibold sm:text-2xl">{name}</h2>
 			<p className="px-5 text-xs sm:text-base dark:text-gray-600">Full-stack developer</p>
 		</div>
 		<div className="flex justify-center pt-2 space-x-4 align-center">

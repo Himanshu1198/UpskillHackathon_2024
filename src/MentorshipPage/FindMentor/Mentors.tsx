@@ -2,7 +2,8 @@ export default function MentorMatch() {
     return (
         <>
         <div className="p-8 ">
-            <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"/>
+            <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-10">
                 <li className="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-gray-200 text-center shadow">
                     <div className="flex flex-1 flex-col p-8">
                         <img className="mx-auto h-32 w-32 flex-shrink-0 rounded-full" src="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=yQ-kKmUAAAAJ&citpid=1" alt="" />

@@ -10,6 +10,5 @@ console.log(`MongoDB connected :${conn.connection.host}`.cyan.underline)
 console.log(`Error: ${err.message}`.red.underline.bold)
 process.exit(1)
     }
-
 }
 module.exports = connectDB

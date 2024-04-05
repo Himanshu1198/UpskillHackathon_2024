@@ -3,12 +3,12 @@ import "@/MentorshipPage/Mentors.css"
 export default function Mentors() {
     return (
         <>
-            <div className="flex justify-between mt-8">
-                <div className="text-left ml-2">
+            <div className="flex items-center mt-8">
+                <div className="text-left ml-2 justify-start">
                     <h1 className="text-3xl font-bold m-2"><span className="text-blue-800">Top</span> Mentors</h1>
                     <p className="text-md text-gray-600 m-2">In search of excellence? Explore the highest-rated mentors as recognized by the mentee community</p>
                 </div>
-                <button className="bg-blue-800 text-white py-2 px-4 rounded mr-7 hover:bg-gray-300 hover:text-black">Mentor Match</button>
+                <button className="bg-blue-800 justify-end text-white p-2 rounded hover:bg-gray-300 hover:text-black">Mentor Match</button>
             </div>
             <div className="card-panel grid grid-cols-1 sm:grid-cols-3 gap-4 items-center mt-10 p-4">
                 <div className="bg-white font-sans flex flex-row justify-center items-center p-4 ml-2 mr-8">

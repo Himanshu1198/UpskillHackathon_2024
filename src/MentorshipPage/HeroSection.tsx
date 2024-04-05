@@ -4,9 +4,9 @@ import Mimg from "@/assets/m1.jpg";
 export default function HeroSection(){
     return(
         <>
-        
-        <div className="mt-[2rem]">
-            <div className="flex pt-32 mt-[-50px] text-left ml-6 bg-white">
+
+        <div>
+            <div className="flex pt-2 text-left ml-6 bg-white">
                 <div className="w-1/2 flex flex-col justify-center items-start p-8">
                     <h1 className="text-5xl font-bold mb-4">Unlock Guidance</h1>
                     <p className="text-lg text-gray-600">Book a session with unstoppable mentors across domains & work together to build your career!</p>

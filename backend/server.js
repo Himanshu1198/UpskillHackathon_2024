@@ -3,11 +3,15 @@ const colors=require('colors')
 const dotenv=require('dotenv').config()
 const connectDB=require('./config/db')
 const {errorHandler}=require('./middleware/errorMiddleware')
+const cors=require('cors')
 const PORT =process.env.PORT ||8000
 connectDB()
 
 const app=express()
-
+app.use(cors({
+    origin: 'http://localhost:5173', // Allow requests from this origin
+    credentials: true // Allow sending cookies with the request
+  }));
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.get('/',(req,res)=>{

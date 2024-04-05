@@ -3,7 +3,7 @@ import Footer from './Footer'
 import { GlobeDemo } from './GlobeSection'
 import LandingPage from './LandingPage'
 import BeMentor from './MentorshipPage/BeMentor/BeMentor'
-import MentorMain from './MentorshipPage/BeMentor/MentorMain'
+// import MentorMain from './MentorshipPage/BeMentor/MentorMain'
 import HeroSection from './MentorshipPage/HeroSection'
 // import HeroSection from './MentorshipPage/HeroSection'
 import MentorshipPage from './MentorshipPage/MentorshipPage'
@@ -20,10 +20,16 @@ import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
 import Login from './Login'
 import Signup from './Signup'
 import MentorMatch from './MentorshipPage/FindMentor/MentorMatch'
+import MentorMain from './MentorshipPage/BeMentor/MentorMain'
+import { useEffect } from 'react'
 function App() {
+  // useEffect(()=>{
+  //   localStorage.setItem('userData',JSON.stringify(null))
+  // })
   return (
     <>
 <Router>
+  {/* <Navbar /> */}
   <Routes>
     <Route path='/' element={<><LandingPage /></>}/>
     <Route path='/login' element={<><Login /></>}/>
@@ -40,5 +46,4 @@ function App() {
     </>
   )
 }
-
 export default App
