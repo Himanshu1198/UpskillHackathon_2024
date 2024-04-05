@@ -3,7 +3,7 @@ import "@/MentorshipPage/Companies.css";
 export default function Companies() {
     return (
         <>
-        <div>
+        <div className="companies-body bg-white">
             <div className="flex items-center mt-8">
                 <div className="mentors-heading mr-6 p-8 mt-10 m-6 text-3xl">Mentors from companies:</div>
                 <div className="slider mt-10 mr-2">
@@ -54,12 +54,12 @@ export default function Companies() {
                 </div>
             </div>
 
-<div className="domains p-10 mt-10">
+<div className="domains p-10 mt-10 ">
             <p className="p-8 text-2xl">Top Domains</p>
-            <div className="button-container">
+            <div className="flex flex-wrap items-center justify-center">
 
-            <div className="line1 mt-4 space-x-12">
-            <button className="px-28 py-5 shadow-[inset_0_0_0_2px_#616467] rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
+            <div className="line1 grid grid-cols-3 mt-4 space-x-12">
+            <button className="flex items-center justify-center px-28 py-5 shadow-[inset_0_0_0_2px_#616467] rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
   AI/ML
 </button>
 <button className="px-28 py-5 shadow-[inset_0_0_0_2px_#616467] rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
@@ -70,7 +70,7 @@ export default function Companies() {
 </button>
 </div>
 
-<div className="line2 mt-12 space-x-12">
+<div className="line2 grid grid-cols-3 mt-12 space-x-12">
             <button className="px-12 py-5 shadow-[inset_0_0_0_2px_#616467]  rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
   Cloud Computing
 </button>

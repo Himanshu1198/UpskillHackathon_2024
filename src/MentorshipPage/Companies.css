@@ -1,9 +1,12 @@
-body {
-    align-items: center;
+.companies-body {
     background: #E3E3E3;
     display: flex;
+    flex-direction: column;
     height: 100vh;
     justify-content: center;
+    text-align: center;
+    align-items: center;
+
 }
 
 @keyframes scroll {
@@ -58,12 +61,12 @@ body {
     .button-container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between; /* or justify-content: space-around; */
+        justify-content: space-between; 
     }
 
     .button-container button {
-        flex: 0 0 calc(50% - 12px); /* Adjust the width as needed */
-        margin-bottom: 12px; /* Add space between rows */
+        flex: 0 0 calc(50% - 12px); 
+        margin-bottom: 12px; 
     }
 }
 
