@@ -5,6 +5,8 @@
   padding: 0rem;
   text-align: center;
   overflow-x: hidden;
+  /* overflow-y:hidden; */
+  height: auto;
   overflow-y: auto;
 }
 

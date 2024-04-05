@@ -19,9 +19,9 @@ import { TypewriterEffectSmoothDemo } from './Typewriter'
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
 import Login from './Login'
 import Signup from './Signup'
+import MentorMatch from './MentorshipPage/FindMentor/MentorMatch'
 import MentorMain from './MentorshipPage/BeMentor/MentorMain'
 import { useEffect } from 'react'
-import MentorMatch from './MentorshipPage/FindMentor/MentorMatch' 
 function App() {
   // useEffect(()=>{
   //   localStorage.setItem('userData',JSON.stringify(null))
@@ -40,15 +40,8 @@ function App() {
     <Route path='/FindMentor' element={<MentorMatch />}/>
   </Routes>
 </Router>
-  {/* <LandingPage/> */}
+ 
 
-  {/* <PageTwo/> */}
-
-
-{/* <MentorshipPage/>   */}
-{/* <MentorshipPage/> */}
-
-{/* <MentorMain/> */}
       
     </>
   )
