@@ -39,10 +39,7 @@ function App() {
     <Route path='/BeMentor' element={<MentorMain />}/>
     <Route path='/FindMentor' element={<MentorMatch />}/>
   </Routes>
-</Router>
- 
-
-      
+</Router>     
     </>
   )
 }

@@ -28,23 +28,40 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      // Make POST request to signup API endpoint
-      const response = await axios.post('http://localhost:8000/api/users/register', formData);
-      
+      // Define request options
+      const requestOptions = {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+      };
+  
+      // Make POST request to signup API endpoint with JSON data
+      const response = await fetch('http://localhost:8000/api/users/register', requestOptions);
+  
+      // Check if request was successful
+      if (!response.ok) {
+          throw new Error('Signup failed');
+      }
+  
       // Extract user data from response
-      const user = response.data;
-
+      const user = await response.json();
+  
       // Store user data in local storage
       localStorage.setItem('user', JSON.stringify(user));
-
+  
       // Dispatch action to update context state
       dispatch({ type: 'LOGIN', payload: user });
-
+  
       // Redirect user to desired location (e.g., home page)
       navigate('/'); // Assuming '/' is the home page route
-    } catch (error) {
+  } catch (error) {
       console.error('Signup failed:', error);
-    }
+  }
+  
+  
+    
   };
 
   return (

@@ -1,16 +1,4 @@
-interface User {
-  _id: string;
-  name: string;
-  email: string;
-  password: string;
-  isAdmin: boolean;
-  createdAt: string;
-  updatedAt: string;
-  __v: number;
-  mentors: string[]; // array of user IDs for mentors
-  mentees: string[]; //array of mentees 
-
-}
+import {User} from '../../interface/user'
 
 interface AuthState {
   currentUser: User | null;
@@ -29,12 +17,13 @@ const AuthReducer = (state: AuthState, action: Action): AuthState => {
           };
       }
       case "LOGOUT": {
-          return {
-              currentUser: null,
-          };
+        return {
+          currentUser: null,
+        };
       }
+      
       default:
-          return state;
+          return state; // Return current state if action type is not recognized
   }
 };
 

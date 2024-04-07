@@ -1,27 +1,13 @@
 import React, { createContext, useEffect, useReducer } from "react";
 import AuthReducer from "./AuthReducer";
-
-interface User {
-    _id: string;
-    name: string;
-    email: string;
-    password: string;
-    isAdmin: boolean;
-    createdAt: string;
-    updatedAt: string;
-    token: string | null; // Change token property to string or null
-    __v: number;
-    mentors: string[]; // Array of user IDs for mentors
-    mentees: string[]; // Array of user IDs for mentees
-}
-
+import {User} from '../../interface/user' 
 interface AuthState {
     currentUser: User | null;
 }
 
 interface Action {
     type: string;
-    payload: User | null; 
+    payload  ?: User | null; 
 }
 
 const INITIAL_STATE: AuthState = {
@@ -38,6 +24,7 @@ export const AuthContextProvider: React.FC<{ children: React.ReactNode }> = ({ c
 
     useEffect(() => {
         localStorage.setItem("user", JSON.stringify(state.currentUser));
+        console.log(state.currentUser)
     }, [state.currentUser]);
 
     return (
