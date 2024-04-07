@@ -1,5 +1,12 @@
 .right-panel{
     width: fit-content;
+    justify-content: space-between;
     overflow-y: auto;
     background-color: rgb(243 244 246);
+}
+
+.container-panel{
+    width: max-content;
+    display: flex;
+    justify-content: space-between;
 }

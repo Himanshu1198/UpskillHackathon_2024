@@ -1,13 +1,13 @@
 #root {
   max-width: 1580px;
-  height: auto;
+  /* height: auto; */
   margin: 0 auto;
   padding: 0rem;
   text-align: center;
   overflow-x: hidden;
   /* overflow-y:hidden; */
-  height: auto;
-  overflow-y: auto;
+  /* height: auto; */
+  /* overflow-y: auto; */
 }
 
 .logo {

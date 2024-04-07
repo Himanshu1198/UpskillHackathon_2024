@@ -1,14 +1,22 @@
-import "@/MentorshipPage/Mentors.css"
+import "@/MentorshipPage/Mentors.css";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Mentors() {
+    const navigate = useNavigate();
+
+    const handle_Click = () => {
+        navigate('/FindMentor');
+      };
+
     return (
         <>
-            <div className="flex items-center mt-8">
-                <div className="text-left ml-2 justify-start">
-                    <h1 className="text-3xl font-bold m-2"><span className="text-blue-800">Top</span> Mentors</h1>
+            <div className="flex items-center justify-between m-4 mt-8">
+                <div className="text-left ml-2">
+                    <h1 className="text-3xl font-bold"><span className="text-blue-800">Top</span> Mentors</h1>
                     <p className="text-md text-gray-600 m-2">In search of excellence? Explore the highest-rated mentors as recognized by the mentee community</p>
                 </div>
-                <button className="bg-blue-800 justify-end text-white p-2 rounded hover:bg-gray-300 hover:text-black">Mentor Match</button>
+                <button onClick={handle_Click} className="bg-blue-800 justify-end text-white p-2 rounded hover:bg-gray-300 hover:text-black">Mentor Match</button>
             </div>
             <div className="card-panel grid grid-cols-1 sm:grid-cols-3 gap-4 items-center mt-10 p-4">
                 <div className="bg-white font-sans flex flex-row justify-center items-center p-4 ml-2 mr-8">
