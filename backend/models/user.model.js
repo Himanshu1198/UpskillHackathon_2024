@@ -17,7 +17,7 @@ const userSchema = mongoose.Schema({
     img:{
         type: String,
         required: [false,''],
-        default: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fprofile-image&psig=AOvVaw09GT5QCVMmmFKm6AK6u0AM&ust=1712493813748000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOj_gt7OrYUDFQAAAAAdAAAAABAE'
+        default: 'https://thumbs.dreamstime.com/z/businessman-avatar-image-beard-hairstyle-male-profile-vector-illustration-178545831.jpg?ct=jpeg'
     },
     isMentor: {
         type: Boolean,
