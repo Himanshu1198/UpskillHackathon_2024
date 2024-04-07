@@ -16,7 +16,7 @@ const ListItem: React.FC<ListItemProps> = ({ user }) => {
   const handleFollowUser = async () => {
     try {
       console.log(currentUser?._id,user._id)
-      await axios.post(`http://localhost:8000/api/users/follow/?followerId=${currentUser?._id}&followedToId=${user._id}`);
+      await axios.post(`https://skillsyncbackend-7cib.onrender.com/api/users/follow/?followerId=${currentUser?._id}&followedToId=${user._id}`);
     setFollow('Followed')
     } catch (error) {
       console.error('Error following user:', error);
@@ -50,7 +50,7 @@ const List: React.FC<ListProps> = ({ onClose }) => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/users/getuser');
+        const response = await axios.get('https://skillsyncbackend-7cib.onrender.com/api/users/getuser');
         setUsers(response.data.users);
       } catch (error) {
         console.error('Error fetching users:', error);

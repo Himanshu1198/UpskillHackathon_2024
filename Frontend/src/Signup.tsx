@@ -38,7 +38,7 @@ const Signup = () => {
       };
   
       // Make POST request to signup API endpoint with JSON data
-      const response = await fetch('http://localhost:8000/api/users/register', requestOptions);
+      const response = await fetch('https://skillsyncbackend-7cib.onrender.com/api/users/register', requestOptions);
   
       // Check if request was successful
       if (!response.ok) {

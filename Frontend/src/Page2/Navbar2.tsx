@@ -48,7 +48,7 @@ const Navbar2: React.FC = () => {
           <Link to='/login' className="log-in">Logged In
           </Link>
           :
-          <Link to='/login' className="log-in">Log Out
+          <Link to='/login' className="log-in">Log In
           </Link>
             }
           </div>

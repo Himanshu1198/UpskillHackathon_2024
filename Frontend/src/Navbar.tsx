@@ -23,11 +23,13 @@ const Navbar: React.FC = () => {
           <Link to="#">About</Link>
           <Link to="#">Contact</Link>
           <Link to="#">Blog</Link>
-          <Link to='#'>Be a Mentor</Link>
-          <Link to='#'>Find a Mentor</Link>
+          <Link to='/BeMentor'>Be a Mentor</Link>
+          <Link to='/FindMentor'>Find a Mentor</Link>
           {currentUser ? (
             <>
+            <Link to='/'>
               <button className="log-in" onClick={handleLogout}>Log out</button>
+              </Link>
               {/* Apply styles directly to the img element */}
               <Link to='/PageTwo'>
               <img src={currentUser.img} className='profile-img' style={{ borderRadius: '50%', width: '40px', height: '40px' }} alt="Profile" />
