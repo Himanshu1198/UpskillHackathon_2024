@@ -6,8 +6,8 @@ export default function Filterbar() {
                     <div className="border border-gray-300 p-6 grid grid-cols-1 gap-6 bg-white shadow-lg rounded-lg">
                         <div className="flex flex-col md:flex-row">
                             <div className="">
-                                <select className="border p-2 rounded">
-                                    <option>Domain</option>
+                                <select className="border p-2 rounded bg-gray-300 text-gray-600">
+                                    <option className="">Domain</option>
                                     <option>Web Development</option>
                                     <option>App Development</option>
                                     <option>Machine Learning</option>
@@ -26,13 +26,13 @@ export default function Filterbar() {
                                     <option>2 Passangers</option>
                                 </select> */}
                                 {/* <label>Experience:</label> */}
-                                <input type="number" name="Experience" placeholder="Experience" className="border p-2 rounded" />
+                                <input type="number" name="Experience" placeholder="Experience" className="border p-2 rounded bg-gray-300" />
                             </div>
                             <div className="pt-6 md:pt-0 md:pl-6">
                                 {/* <select className="border p-2 rounded">
                                     <option>Economy</option>
                                 </select> */}
-                                <input type="number" name="Connections" placeholder="Connections" className="border p-2 rounded" />
+                                <input type="number" name="Connections" placeholder="Connections" className="border p-2 rounded bg-gray-300" />
                             </div>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

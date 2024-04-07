@@ -8,11 +8,11 @@ import Mentors from "./Mentors";
 export default function MentorshipPage(){
     return(
         <>
-        {/* <Navbar/> */}
+        <Navbar/>
         <div className="h-screen bg-white">
-        {/* <HeroSection/> */}
-        {/* <Companies/> */}
-        {/* <Mentors/> */}
+        <HeroSection/>
+        <Companies/>
+        <Mentors/>
         <Faq/>
         </div>
         </>

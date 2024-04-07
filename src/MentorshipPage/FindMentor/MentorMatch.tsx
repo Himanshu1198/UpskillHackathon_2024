@@ -9,9 +9,7 @@ export default function MentorMatch() {
 			<Header />
 			<Filterbar />
 			<Mentors />
-            <div>
-                <p>Helloo</p>
-            </div>
+            
             </div>
         </>
     )

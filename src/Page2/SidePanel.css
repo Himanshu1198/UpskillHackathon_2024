@@ -11,17 +11,15 @@
 }
 
 
-/* button{
-    display: flex;
-<<<<<<< HEAD
-} */
-=======
-    /* align-self: flex-end; */
->>>>>>> f6f969ca8adea261350c42eac2b5288640a4967a
-
 @media (max-width: 900px) {
     .side-panel {
       display: none;
     }
   }
   
+@media (max-width: 1125px){
+   .side-panel {
+      display: none;
+    }
+  
+}
