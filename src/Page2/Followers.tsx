@@ -11,11 +11,13 @@ interface ListItemProps {
 
 const ListItem: React.FC<ListItemProps> = ({ user }) => {
   const { currentUser } = useContext(AuthContext);
+  const [Follow, setFollow] = useState('Follow')
 
   const handleFollowUser = async () => {
     try {
       console.log(currentUser?._id,user._id)
       await axios.post(`http://localhost:8000/api/users/follow/?followerId=${currentUser?._id}&followedToId=${user._id}`);
+    setFollow('Followed')
     } catch (error) {
       console.error('Error following user:', error);
     }
@@ -31,7 +33,7 @@ const ListItem: React.FC<ListItemProps> = ({ user }) => {
         </div>
       </div>
       <div>
-        <button className="px-3 py-2 bg-red-800 hover:bg-amber-900 text-white rounded-md" onClick={handleFollowUser}>Follow</button>
+        <button className="px-3 py-2 bg-red-800 hover:bg-amber-900 text-white rounded-md" onClick={handleFollowUser}>{Follow}</button>
       </div>
     </div>
   );

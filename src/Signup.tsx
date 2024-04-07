@@ -55,7 +55,7 @@ const Signup = () => {
       dispatch({ type: 'LOGIN', currentUser: user });
   
       // Redirect user to desired location (e.g., home page)
-      navigate('/'); // Assuming '/' is the home page route
+      navigate('/PageTwo'); // Assuming '/' is the home page route
   } catch (error) {
       console.error('Signup failed:', error);
   }

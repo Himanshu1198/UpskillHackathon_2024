@@ -55,7 +55,7 @@ const Login = () => {
       dispatch({ type: 'LOGIN', currentUser: user });
 
       // Redirect to desired location
-      navigate('/');
+      navigate('/PageTwo');
     } catch (error) {
       console.error('Login failed:', error);
     }

@@ -29,7 +29,9 @@ const Navbar: React.FC = () => {
             <>
               <button className="log-in" onClick={handleLogout}>Log out</button>
               {/* Apply styles directly to the img element */}
+              <Link to='/PageTwo'>
               <img src={currentUser.img} className='profile-img' style={{ borderRadius: '50%', width: '40px', height: '40px' }} alt="Profile" />
+              </Link>
             </>
           ) : (
             <Link to="/login" className="log-in">Log In</Link>
