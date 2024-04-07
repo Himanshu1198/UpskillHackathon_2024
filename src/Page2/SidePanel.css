@@ -1,0 +1,25 @@
+*{
+    font-family:"Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.side-panel{
+    height: fit-content;
+    width: 25%;
+}
+
+
+@media (max-width: 900px) {
+    .side-panel {
+      display: none;
+    }
+  }
+  
+@media (max-width: 1125px){
+   .side-panel {
+      display: none;
+    }
+  
+}
