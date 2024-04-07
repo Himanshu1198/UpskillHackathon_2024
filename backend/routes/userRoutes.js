@@ -4,7 +4,9 @@ const {registerUser,loginUser,getMe}=require('../controllers/userController')
 const {getUserMessage,receiveMessage, sendMessage} = require('../controllers/messageController');
 const {protect}=require('../middleware/authMiddleware')
 const {getUsers} = require('../controllers/userController')
-// const {follow} = require()
+const {followUser,unfollow} = require('../controllers/followController')
+const {searchSkills} = require('../controllers/skillController')
+
 
 router.post('/register', registerUser)
 router.post('/login',loginUser)
@@ -17,7 +19,11 @@ router.post('/message',sendMessage)
 
 
 // Follow people routes
-// router.get('/following',follow)
-
+router.post('/follow',followUser)
+router.post('/unfollow',unfollow)
 module.exports =router
 
+
+//skills Routes
+
+router.get('/',getSkills)

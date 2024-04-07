@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
 
   const handleLogout = () => {
     dispatch({ type: 'LOGOUT' });
-    localStorage.removeItem('userData'); // Clear user data from local storage
+    localStorage.removeItem('user'); // Clear user data from local storage
   };
   
   return (
@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
             <>
               <button className="log-in" onClick={handleLogout}>Log out</button>
               {/* Apply styles directly to the img element */}
-              <img src={currentUser.user.img} className='profile-img' style={{ borderRadius: '50%', width: '40px', height: '40px' }} alt="Profile" />
+              <img src={currentUser.img} className='profile-img' style={{ borderRadius: '50%', width: '40px', height: '40px' }} alt="Profile" />
             </>
           ) : (
             <Link to="/login" className="log-in">Log In</Link>

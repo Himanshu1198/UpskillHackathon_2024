@@ -21,6 +21,7 @@ import Login from './Login'
 import Signup from './Signup'
 import MentorMatch from './MentorshipPage/FindMentor/MentorMatch'
 import MentorMain from './MentorshipPage/BeMentor/MentorMain'
+import BeMentorForm from './MentorshipPage/BeMentor/BeMentorForm'
 import { useEffect } from 'react'
 function App() {
   // useEffect(()=>{
@@ -38,6 +39,7 @@ function App() {
     <Route path='/PageTwo' element={<PageTwo />}/>
     <Route path='/BeMentor' element={<MentorMain />}/>
     <Route path='/FindMentor' element={<MentorMatch />}/>
+    <Route path='/BeMentorForm' element={<BeMentorForm />}/>
   </Routes>
 </Router>     
     </>

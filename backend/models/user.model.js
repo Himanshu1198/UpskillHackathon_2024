@@ -14,22 +14,20 @@ const userSchema = mongoose.Schema({
         type: String,
         required: [true, 'Please add a password']
     },
-    img:{
+    img: {
         type: String,
-        required: [false,''],
         default: 'https://thumbs.dreamstime.com/z/businessman-avatar-image-beard-hairstyle-male-profile-vector-illustration-178545831.jpg?ct=jpeg'
     },
     isMentor: {
         type: Boolean,
-        required: false,
         default: false
     },
-    mentors: {
+    Mentors: {
         type: [mongoose.Schema.Types.ObjectId],
         ref: 'User',
         default: []
     },
-    mentees: {
+    Mentees: {
         type: [mongoose.Schema.Types.ObjectId],
         ref: 'User',
         default: []

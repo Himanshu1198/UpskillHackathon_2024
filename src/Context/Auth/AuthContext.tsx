@@ -1,13 +1,15 @@
-import React, { createContext, useEffect, useReducer } from "react";
+import React, { createContext, useEffect, useReducer, Dispatch } from "react";
 import AuthReducer from "./AuthReducer";
-import {User} from '../../interface/user' 
+import { User } from '../../interface/user';
+
 interface AuthState {
     currentUser: User | null;
 }
 
 interface Action {
     type: string;
-    payload  ?: User | null; 
+    currentUser?: User | null;
+    payload?: User|null;
 }
 
 const INITIAL_STATE: AuthState = {
@@ -16,7 +18,7 @@ const INITIAL_STATE: AuthState = {
 
 export const AuthContext = createContext<{
     currentUser: User | null;
-    dispatch: React.Dispatch<Action>;
+    dispatch: React.Dispatch<Action>; // Use Dispatch type from react module
 }>({ currentUser: null, dispatch: () => null });
 
 export const AuthContextProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -24,11 +26,11 @@ export const AuthContextProvider: React.FC<{ children: React.ReactNode }> = ({ c
 
     useEffect(() => {
         localStorage.setItem("user", JSON.stringify(state.currentUser));
-        console.log(state.currentUser)
+        console.log(state.currentUser);
     }, [state.currentUser]);
 
     return (
-        <AuthContext.Provider value={{ currentUser: state.currentUser, dispatch }}>
+        <AuthContext.Provider value={{ ...state, dispatch }}>
             {children}
         </AuthContext.Provider>
     );

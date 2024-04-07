@@ -52,7 +52,7 @@ const Signup = () => {
       localStorage.setItem('user', JSON.stringify(user));
   
       // Dispatch action to update context state
-      dispatch({ type: 'LOGIN', payload: user });
+      dispatch({ type: 'LOGIN', currentUser: user });
   
       // Redirect user to desired location (e.g., home page)
       navigate('/'); // Assuming '/' is the home page route

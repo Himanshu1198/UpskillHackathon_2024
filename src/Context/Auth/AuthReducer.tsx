@@ -6,14 +6,14 @@ interface AuthState {
 
 interface Action {
   type: string;
-  payload: User | null;
+  currentUser: User | null;
 }
 
 const AuthReducer = (state: AuthState, action: Action): AuthState => {
   switch (action.type) {
       case "LOGIN": {
           return {
-              currentUser: action.payload,
+              currentUser: action.currentUser,
           };
       }
       case "LOGOUT": {

@@ -46,13 +46,13 @@ const Login = () => {
         throw new Error('Login failed');
       }
 
-      const user = await response.json();
-
+      const {user} = await response.json();
+      console.log(user)
       // Store user data in local storage
       localStorage.setItem('user', JSON.stringify(user));
 
       // Dispatch action to update context state
-      dispatch({ type: 'LOGIN', payload: user });
+      dispatch({ type: 'LOGIN', currentUser: user });
 
       // Redirect to desired location
       navigate('/');

@@ -12,7 +12,7 @@
     mentors: string[];
     mentees: string[];
     status: string; // Update the status property type
-    currentUser: null; // Add the currentUser property
+    // Add the currentUser property
 }
 
   
