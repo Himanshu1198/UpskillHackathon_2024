@@ -5,7 +5,6 @@ const User=require('../models/user.model')
 const jwt=require('jsonwebtoken')
 
 
-
 const registerUser=asyncHandler(async(req,res)=>{
 
 const { name , email , password }=req.body

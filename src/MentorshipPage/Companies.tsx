@@ -2,11 +2,8 @@ import "@/MentorshipPage/Companies.css";
 export default function Companies() {
     return (
         <>
-<<<<<<< HEAD
         <div className="companies-body bg-white">
-=======
         <div className="companies-body">
->>>>>>> f6f969ca8adea261350c42eac2b5288640a4967a
             <div className="flex items-center mt-8">
                 <div className="mentors-heading mr-6 p-8 mt-10 m-6 text-3xl">Mentors from companies:</div>
                 <div className="slider mt-10 mr-2">

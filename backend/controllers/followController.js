@@ -3,9 +3,11 @@ const User = require('../models/user.model'); // Import the User model
 
 const followUser = async (req, res) => {
     try {
+        console.log("herre")
         const followerId = req.query.followerId;
         const followedToId = req.query.followedToId;
         console.log(followerId,followedToId)
+
         // Validate if followerId and followedToId are provided
         if (!followerId || !followedToId) {
             res.status(error.status).json({ success: false, message: 'follower Id or Followed to ID are undefined' });
@@ -40,7 +42,6 @@ const unfollow = async (req, res) => {
         if (!followerId || !followedToId) {
             return res.status(400).json({ success: false, message: "Follower ID or followed-to ID are undefined" });
         }
-
         // // Find the follower and followed user
         // const follower = await User.findById(followerId);
         // const followedTo = await User.findById(followedToId);

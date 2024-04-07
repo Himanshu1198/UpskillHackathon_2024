@@ -7,10 +7,8 @@ const searchUsers = async (req, res) => {
     try {
         // Extract query parameters from the request
         const { name, skills, industry, page = 1, limit = 10 } = req.query;
-
         // Prepare the search query
         const query = {};
-
         // Add conditions for name, skills, and industry if provided
         if (name) {
             query.name = { $regex: name, $options: 'i' }; // Case-insensitive search
@@ -21,6 +19,7 @@ const searchUsers = async (req, res) => {
         if (industry) {
             query.industry = { $regex: industry, $options: 'i' }; // Case-insensitive search
         }
+        
 
         // Calculate the skip value for pagination
         const skip = (page - 1) * limit;

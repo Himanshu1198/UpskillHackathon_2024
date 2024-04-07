@@ -1,6 +1,6 @@
 // controller.js
 
-const Skill = require('../models/Skill'); // Assuming you have a Skill model defined
+const Skill = require('../models/skill.model'); // Assuming you have a Skill model defined
 
 // Controller function to search for skills
 const searchSkills = async (req, res) => {

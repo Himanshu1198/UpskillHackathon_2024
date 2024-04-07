@@ -26,4 +26,4 @@ module.exports =router
 
 //skills Routes
 
-router.get('/',getSkills)
+router.get('/',searchSkills)
